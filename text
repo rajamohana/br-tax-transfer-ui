@@ -79,3 +79,34 @@
         "clientCode": "CIBC"
     }
 ]
+------------------------------------------------------------------------------------------------------------------------
+Login Response:
+{
+    "authorities": [],
+    "details": {
+        "remoteAddress": "10.104.66.29",
+        "sessionId": null
+    },
+    "authenticated": true,
+    "principal": {
+        "username": "abcd",
+        "password": null,
+        "fullName": "abcd, abcd",
+        "displayName": "abcd, abcd",
+        "distinguishedName": "CN=abcd\\, abcd,OU=HBAD Users,OU=HBAD,DC=bsg,DC=ad,DC=adp,DC=com",
+        "email": "abcd@gmail.com",
+        "lastName": "abcd",
+        "firstName": "abcd",
+        "phoneNumber": null,
+        "authorities": [],
+        "role": null,
+        "enabled": true,
+        "accountNonExpired": false,
+        "accountNonLocked": false,
+        "credentialsNonExpired": false
+    },
+    "credentials": null,
+    "name": "abcd"
+}
+---------
+role: tax_user_role_dev, tax_admin_role_dev, tax_reporting_role_dev
