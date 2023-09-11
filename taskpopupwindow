@@ -1,0 +1,127 @@
+@PostMapping(value="/taxPrintFileReview/{id}/{clientCode}",produces = { "application/json" })
+	public  ResponseEntity<ReviewFileDefinition> taxPrintFileReview(@RequestParam String id, @RequestParam String clientCode, @RequestBody String zipBundleName)throws Exception{
+------------------------------------------------------------------------------------
+Response:
+{
+    "clientName": "Edward Jones",
+    "clientCode": "EDJ",
+    "clientNumber": "C062",
+    "avosTaskId": 0,
+    "avosUserId": null,
+    "imageBundleFullPath": "C:\\Users\\AnkinapalliR\\development\\TaxFileTransfer\\br-tax-transfer-acceptance-tests\\src\\test\\resources\\PROD.BIOS.C062.OUT6833.RPTS.D1181201.T092700.0601.PROOF.zip",
+    "imageBundle": "PROD.BIOS.C062.OUT6833.RPTS.D1181201.T092700.0601.PROOF.zip",
+    "mailDate": null,
+    "targets": {
+        "target": [
+            {
+                "destination": null,
+                "environment": null,
+                "id": "Client-qa",
+                "combineOutput": true,
+                "imageFileExtensionCase": "lower"
+            },
+            {
+                "destination": null,
+                "environment": null,
+                "id": "Client-prod",
+                "combineOutput": true,
+                "imageFileExtensionCase": "lower"
+            }
+        ]
+    },
+    "status": "Claimed",
+    "fileDefinitions": {
+        "fileDefinition": [
+            {
+                "fileName": "PROD.BIOS.C062.OUT6833.RPTS.D1181201.T092700.0601.PROOF.AFP",
+                "fileNameMask": null,
+                "expectedFlag": false,
+                "transferredBeforeFlag": false,
+                "fileSize": 2311528,
+                "fileSizeDisplay": "2mb",
+                "possibleTargets": {
+                    "possibleTarget": [
+                        {
+                            "targetId": "Client-prod",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "warning"
+                        },
+                        {
+                            "targetId": "Client-qa",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "fileName": "PROD.BIOS.C062.OUT6833.RPTS.D1181204.T092700.0600.PROOF.AFP",
+                "fileNameMask": null,
+                "expectedFlag": false,
+                "transferredBeforeFlag": false,
+                "fileSize": 2311528,
+                "fileSizeDisplay": "2mb",
+                "possibleTargets": {
+                    "possibleTarget": [
+                        {
+                            "targetId": "Client-prod",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "warning"
+                        },
+                        {
+                            "targetId": "Client-qa",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "normal"
+                        }
+                    ]
+                }
+            },
+            {
+                "fileName": "PROD.BIOS.C062.OUT6833.RPTS.D1181204.T092700.0602.PROOF.AFP",
+                "fileNameMask": null,
+                "expectedFlag": false,
+                "transferredBeforeFlag": false,
+                "fileSize": 2311528,
+                "fileSizeDisplay": "2mb",
+                "possibleTargets": {
+                    "possibleTarget": [
+                        {
+                            "targetId": "Client-prod",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "warning"
+                        },
+                        {
+                            "targetId": "Client-qa",
+                            "transferFlag": false,
+                            "transferDateTime": null,
+                            "manualTransferFlag": null,
+                            "manualTransferAvosTaskId": null,
+                            "transferErrorReason": null,
+                            "confirmationLevel": "normal"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
