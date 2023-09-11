@@ -1,31 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { ConfigService } from './config.service';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
-}
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+};
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class ClientDataService {
+  constructor(private http: HttpClient, private configService:ConfigService) {}
 
-
-  constructor(private http: HttpClient) { }
-  
   getCustomerCodes() {
-    return this.http.get('/api/listAllCustomerCodes');
+    return this.http.get(`${this.configService.globalApi}/api/listAllCustomerCodes`);
   }
-  getlistAllTaxOpenTasks(clientCode: string){
-    return this.http.get('/api/viewAllTaxOpenTasks/'+ clientCode);
+  getlistAllTaxOpenTasks(clientCode: string) {
+    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxOpenTasks/${clientCode}`);
   }
-  getlistAllTaxClosedTasks(status: string, clientCode: string){
-    return this.http.get('/api/viewAllTaxClosedTasks/' + status + '/' + clientCode);
+  getlistAllTaxClosedTasks(status: string, clientCode: string) {
+    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxClosedTasks/${status}/${clientCode}`);
   }
   getTaxClaimedTaskRelease(requestBody: any) {
-    return this.http.post('/api/taxClaimedTaskRelease', requestBody);
+    return this.http.post(`${this.configService.globalApi}/api/taxClaimedTaskRelease`, requestBody);
   }
-
-  
 }
