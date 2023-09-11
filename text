@@ -80,3 +80,40 @@
     }
 ]
 ------------------------------------------------------------------------------------------------------------------------
+URL:localhost:8080/api/taxClaimedTaskRelease
+RequestBody:
+[
+    {
+        "id": 1,
+        "clientCode": "ABC123",
+        "taskSubject": "Task 1",
+        "userName": "User1"
+    },
+    {
+        "id": 2,
+        "clientCode": "XYZ789",
+        "taskSubject": "Task 2",
+        "userName": "User2"
+    }
+]
+Response:
+"COMPLETED"
+-----------------------------------------------------------------
+URL:localhost:8080/api/getTaxTaskComplete
+RequestBody:
+[
+    {
+        "id": 1,
+        "clientCode": "ABC123",
+        "taskSubject": "Task 1",
+        "userName": "User1"
+    },
+    {
+        "id": 2,
+        "clientCode": "XYZ789",
+        "taskSubject": "Task 2",
+        "userName": "User2"
+    }
+]
+Response:
+"COMPLETED"
