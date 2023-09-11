@@ -1,0 +1,10 @@
+URL:localhost:8080/api/upload/{customerCode}/{userName}
+requestparams:customerCode,userName
+requestBody:
+{"bundleFullPath":"src/main/resources/PROD.BIOS.C062.OUT6833.RPTS.D1181201.T092700.0601.PROOF.zip"}
+Response:
+{
+    "message": "Print bundle 'C:\\Users\\AnkinapalliR\\development\\TaxFileTransfer\\br-tax-transfer-rest-services\\src\\main\\resources\\PROD.BIOS.C062.OUT6833.RPTS.D1181201.T092700.0601.PROOF.zip'submitted successfully for client'edj'.",
+    "reason": "INVALID_REVIEW_DIRECTORY",
+    "valid": false
+}
