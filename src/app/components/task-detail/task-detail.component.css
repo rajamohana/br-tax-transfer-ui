@@ -1,0 +1,6 @@
+.custom-table {
+    border: 1px solid #ccc; /* Add a border */
+    height: 200px; /* Adjust the height as needed */
+    overflow-y: scroll; /* Add vertical scroll if the content exceeds the specified height */
+  }
+  

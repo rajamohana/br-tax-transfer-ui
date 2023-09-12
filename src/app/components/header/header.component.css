@@ -1,0 +1,80 @@
+/*START Header Style 1 */
+.br-header .navbar-right {
+    color: #007bb6;
+  }
+  .br-header .navbar-right .mat-button-wrapper {
+    display: inline-block;
+    padding: 5px;
+  }
+  .br-header .navbar-right .mat-button-wrapper.app-hero a{
+    background: #007bb6;
+    color: #fff;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    font-size: 12px;
+  }
+  .br-header .br-header-blue {
+    background-image: url('/assets/images/br-header.svg');
+    background-color: #003657;
+    color: #fff;
+    background-position: center;
+    height: 50px;
+    background-size: cover;
+  }
+  .br-header .br-header-blue .nav-link{
+    color: #fff;
+    font-size: 16px;
+    padding: .5rem 1rem;;
+    position: relative;
+  }
+  .br-header .br-header-blue .nav-link:hover {
+    background-color: #fff;
+    color: #007bb6;
+  }
+  .br-header .br-header-white {
+    background-color: #fff;
+    color: #003657;
+    height: 50px;
+  }
+  .search-box  {
+    background-color: #fff;
+    color: #007bb6;
+    border-radius: 2px;
+    border: 1px solid #d1d1d1;
+  }
+  .search-box .form-control {
+    border: none; 
+  }
+  .search-box .form-control:focus {
+    box-shadow: none;
+  }
+  .search-box button {
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+  }
+  .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+  .navbar-collapse-button {
+    min-width: 40px;
+    padding: 0 8px;
+    border: 1px solid #007bb6;
+    color: #ffffff;
+  }
+  .br-brand-logo {
+    padding: 12.5px;
+  }
+  /*END Header Style 1*/
+  .header-button {
+    text-align: right;
+    padding-right: 10px;
+  }
