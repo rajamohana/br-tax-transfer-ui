@@ -23,4 +23,7 @@ export class ClientDataService {
   getTaxClaimedTaskRelease(requestBody: any) {
     return this.http.post(`${this.configService.globalApi}/api/taxClaimedTaskRelease`, requestBody);
   }
+  postCompleteDetails(payLoad: any) {
+    return this.http.post(`${this.configService.globalApi}/api/getTaxTaskComplete`, payLoad);
+  }
 }

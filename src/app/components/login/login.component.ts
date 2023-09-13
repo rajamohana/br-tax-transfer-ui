@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
+import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { UserAuthenticationService } from '../../services/user-authentication.service';
 
 @Component({
@@ -19,13 +13,14 @@ export class LoginComponent implements OnInit {
   errorMessage: string = '';
 
   constructor(
-    private httpClient: HttpClient,
     private userAuth: UserAuthenticationService,
     private router: Router,
     private fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
+    this.userAuth.subject.next('');
+    localStorage.clear();
     this.clearMessage();
     if (this.userAuth.authenticated === true) {
       this.router.navigateByUrl('/logged-user');
@@ -43,17 +38,19 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/home']);
-    // this.userAuth.authenticate(this.loginForm.value, () => {
-    //   if (this.userAuth.authenticated === true) {
-    //     localStorage.setItem('isUserLogged', 'true');
-    //     this.router.navigateByUrl('/tasks');
-    //   } else {
-    //     console.log('User not authenticated!');
-    //     this.errorMessage = 'Incorrect Username / Password!';
-    //   }
-    // });
-    // this.loginForm.reset();
-    // return false;
+
+    // let data = { isAuthenticated: true, userName: 'Siva kumar' };
+    // localStorage.setItem('userDetails', JSON.stringify(data));
+    // this.userAuth.setProperty();
+    // this.router.navigate(['/home']);
+      this.userAuth.authenticate(this.loginForm.value, () => {
+        if (this.userAuth.authenticated === true) {
+          this.router.navigate(['/home']);
+        } else {
+          this.errorMessage = 'Incorrect Username / Password!';
+        }
+      });
+      this.loginForm.reset();
+      return false;
   }
 }
