@@ -15,10 +15,10 @@ export class ClientDataService {
     return this.http.get(`${this.configService.globalApi}/api/listAllCustomerCodes`);
   }
   getlistAllTaxOpenTasks(clientCode: string) {
-    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxOpenTasks/${clientCode}`);
+    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxOpenTasks?clientCode=${clientCode}`);
   }
   getlistAllTaxClosedTasks(status: string, clientCode: string) {
-    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxClosedTasks/${status}/${clientCode}`);
+    return this.http.get(`${this.configService.globalApi}/api/viewAllTaxClosedTasks?status=${status}&clientCode=${clientCode}`);
   }
   getTaxClaimedTaskRelease(requestBody: any) {
     return this.http.post(`${this.configService.globalApi}/api/taxClaimedTaskRelease`, requestBody);
